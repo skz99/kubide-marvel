@@ -1,0 +1,67 @@
+@import "../../../scss/variables";
+
+.menu-container {
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+
+.parent-button {
+    width: 70%;
+    min-height: 19rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0px 2px 14px -3px black;
+    @media screen and (max-width: $breakpoint-md) {
+        height: 7rem;
+        margin-top: 1.5rem;
+    }
+}
+
+.parent-button:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.child-button {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 1s;
+    filter: grayscale(100%);
+}
+
+.parent-button:hover .child-button {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.parent-button:focus .child-button {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.text-button-display {
+    color: white;
+    font-size: 3rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-shadow: 2px 1px black;
+    @media screen and (max-width:  $breakpoint-md) {
+        font-size: 2rem;
+        left: 0%;
+    }
+}
+
+a {
+    text-decoration: none;
+}

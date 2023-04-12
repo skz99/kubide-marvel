@@ -1,0 +1,32 @@
+<oc-spinner *ngIf="loadingBoolean"></oc-spinner>
+<div class="searcher">
+    <div class="input-group">
+        <span class="input-group-text icon-searcher" id="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </span>
+        <input type="text" (input)="searchText($event)" placeholder="Soy un buscador (una pista, funciono con nombres)"
+            class="searcher-text form-control input-searcher" />
+    </div>
+</div>
+
+<div class="main-body row" #characterContainer>
+    <ng-container *ngFor="let character of characters">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card mb-4">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="{{character.thumbnail?.path}}.{{character.thumbnail?.extension}}" class="card-img-top"
+                            width="320" height="300" alt="image not found">
+                    </div>
+                    <div class="card-back">
+                        {{character.description}}
+                    </div>
+                    <div class="card-body character-body">
+                        <p class="card-text character-text">{{character.name}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>
