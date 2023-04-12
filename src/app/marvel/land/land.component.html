@@ -1,0 +1,31 @@
+<oc-spinner *ngIf="loadingBoolean"></oc-spinner>
+
+<div class="menu-container">
+    <div class="parent-button">
+        <a (click)="redirectTo('characters')">
+            <div class="child-button" style="background-image: url(assets/module-selector/characters.webp)">
+                <div class="text-button-display">
+                    <span>Personajes</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="parent-button">
+        <a (click)="redirectTo('none')">
+            <div class="child-button" style="background-image: url(assets/module-selector/comics.webp)">
+                <div class="text-button-display">
+                    <span>Comics</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="parent-button">
+        <a (click)="redirectTo('none')">
+            <div class="child-button" style="background-image: url(assets/module-selector/films.webp)">
+                <div class="text-button-display">
+                    <span>Películas</span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
